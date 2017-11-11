@@ -7,6 +7,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                // show current path
+                sh 'echo `pwd`'
+                // build
                 sh './mvnw build'
             }
         }
