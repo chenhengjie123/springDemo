@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent mac 
     stages {
         stage('Build') {
             steps {
