@@ -10,7 +10,7 @@ pipeline {
                 // show current path
                 sh 'echo `pwd`'
                 // build
-                sh 'mvn build'
+                sh 'mvn clean install'
             }
         }
         stage('Sonar scan') {
