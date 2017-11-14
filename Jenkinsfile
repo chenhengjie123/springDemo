@@ -1,9 +1,14 @@
 pipeline {
-    agent {
-        node {
-            label 'mac'
-        }
-    } 
+    agent any
+    //{
+        //node {
+        //    label 'mac'
+        //}
+    //}
+    tools {
+        // install maven 3.5.0 automatically
+        maven 'apache-maven-3.5.0'
+    }
     stages {
         stage('Build') {
             steps {
