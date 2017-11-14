@@ -37,5 +37,14 @@ pipeline {
                 }
             }
         }
+        stage('api test') {
+            steps {
+                def gitUrl = 'https://github.com/chenhengjie123/springDemo.git'
+                def mvnCommand = 'mvn test'
+
+                // git clone && run test
+                sh "git clone "${gitUrl}" apiTest && cd apiTest && "${mvnCommand}
+            }
+        }
     }
 }
