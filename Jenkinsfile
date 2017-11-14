@@ -6,8 +6,8 @@ pipeline {
         //}
     //}
     tools {
-        // install maven 3.5.0 automatically
-        maven 'apache-maven-3.5.0'
+        // use tools in Manage Jenkins → Global Tool Configuration
+        maven 'maven'
     }
     stages {
         stage('Build') {
