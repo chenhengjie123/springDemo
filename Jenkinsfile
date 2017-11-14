@@ -44,7 +44,7 @@ pipeline {
                     def mvnCommand = 'mvn test'
 
                     // git clone && run test
-                    sh "git clone "${gitUrl}" apiTest && cd apiTest && "${mvnCommand}
+                    sh "git clone ${gitUrl} apiTest && cd apiTest && ${mvnCommand}"
                 }
             }
         }
